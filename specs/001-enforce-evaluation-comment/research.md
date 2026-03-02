@@ -31,7 +31,7 @@
   - Unit-only coverage in services (rejected: does not prove route wiring correctness).
 
 ## Decision 5: Keep out-of-scope modules untouched
-- **Decision**: No functional changes for logout or attachment upload/download flows.
+- **Decision**: No functional changes for attachment upload/download flows.
 - **Rationale**: Explicitly out-of-scope in the feature brief; minimizing surface area reduces hotfix risk.
 - **Alternatives considered**:
   - Opportunistic cleanup in adjacent modules (rejected: scope creep).
