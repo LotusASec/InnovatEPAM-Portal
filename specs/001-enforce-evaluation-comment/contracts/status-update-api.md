@@ -60,4 +60,4 @@
 
 ## Invariants
 - Status update business rules are enforced by evaluation service as single source of truth.
-- Out-of-scope behaviors remain unchanged (logout, attachment upload/download).
+- Out-of-scope behaviors remain unchanged (attachment upload/download).

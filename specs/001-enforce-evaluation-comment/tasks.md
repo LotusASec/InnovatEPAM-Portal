@@ -80,7 +80,7 @@ This project uses a single backend structure:
 
 - [x] T009 Run full test suite with pytest to verify no regressions
 - [x] T010 Validate quickstart.md scenarios manually if needed
-- [x] T011 Verify out-of-scope endpoints (logout, attachments) remain unchanged
+- [x] T011 Verify out-of-scope endpoints (attachments) remain unchanged
 
 ---
 
@@ -158,7 +158,6 @@ Based on contracts/status-update-api.md:
 
 ### Files NOT Modified (Out of Scope)
 
-- `app/api/routes/auth.py`: Logout behavior unchanged
 - `app/api/routes/ideas.py`: Attachment upload/download unchanged
 - `app/services/idea_service.py`: update_idea_status function preserved but not called by status endpoint
 - `app/services/evaluation_service.py`: Already has correct validation logic
@@ -187,7 +186,7 @@ After completing all tasks:
 - [ ] Admin cannot update status to accepted without comment (400)
 - [ ] Admin cannot update status to rejected without comment (400)
 - [ ] Non-admin cannot update any status (403)
-- [ ] Out-of-scope endpoints work unchanged (logout, attachments)
+- [ ] Out-of-scope endpoints work unchanged (attachments)
 
 ---
 

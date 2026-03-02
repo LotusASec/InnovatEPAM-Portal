@@ -71,7 +71,7 @@ Status validation and rule enforcement should be centralized so API behavior and
 - Comment field containing only whitespace must be treated as missing.
 - Unknown status values must still return a validation error and must not persist state changes.
 - Requests for non-existent idea IDs must return a not-found response without side effects.
-- Out-of-scope endpoints (logout, attachment upload/download) must remain behaviorally unchanged.
+- Out-of-scope endpoints (attachment upload/download) must remain behaviorally unchanged.
 
 ## Assumptions
 
@@ -91,7 +91,7 @@ Status validation and rule enforcement should be centralized so API behavior and
 - **FR-006**: System MUST continue returning HTTP 403 for non-admin attempts to update status.
 - **FR-007**: System MUST preserve existing behavior for valid admin status updates and persist successful changes.
 - **FR-008**: System MUST include integration test coverage for: under_review without comment success, accepted without comment failure, rejected without comment failure, and non-admin forbidden update.
-- **FR-009**: System MUST keep logout and attachment upload/download behavior unchanged as out-of-scope.
+- **FR-009**: System MUST keep attachment upload/download behavior unchanged as out-of-scope.
 
 ### Key Entities *(include if feature involves data)*
 
@@ -108,4 +108,4 @@ Status validation and rule enforcement should be centralized so API behavior and
 - **SC-002**: 100% of admin requests to set status `under_review` without comment succeed with HTTP 200 in integration tests.
 - **SC-003**: 100% of non-admin status update attempts are rejected with HTTP 403 in integration tests.
 - **SC-004**: Existing evaluation-related unit and integration tests remain passing with no regressions after the change.
-- **SC-005**: No scope creep: logout and attachment upload/download test behavior remains unchanged before and after this feature.
+- **SC-005**: No scope creep: attachment upload/download test behavior remains unchanged before and after this feature.

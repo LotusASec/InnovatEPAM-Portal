@@ -32,4 +32,4 @@
 ## Notes
 
 - Validation pass completed in one iteration.
-- Out-of-scope constraints explicitly captured: logout endpoint and attachment upload/download.
+- Out-of-scope constraints explicitly captured: attachment upload/download.
