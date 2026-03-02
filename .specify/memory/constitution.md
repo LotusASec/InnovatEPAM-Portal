@@ -1,16 +1,16 @@
 <!--
 Sync Impact Report
-- Version change: [CONSTITUTION_VERSION] -> 1.0.0
-- Modified principles: Template placeholders -> InnovatEPAM Portal MVP principles
-- Added sections: Technology and Architecture Standards; Development Workflow and Quality Gates
+- Version change: 1.0.0 -> 1.1.0
+- Modified principles: None
+- Added principles: VI. SpecKit Workflow Discipline
+- Added sections: Enhanced Development Workflow with MCP requirements, branching strategy, and PR reporting
 - Removed sections: None
 - Templates requiring updates:
-	- ✅ .specify/templates/plan-template.md (no change needed)
-	- ✅ .specify/templates/spec-template.md (no change needed)
-	- ✅ .specify/templates/tasks-template.md (no change needed)
+	- ✅ .specify/templates/plan-template.md (already aligned with SpecKit workflow)
+	- ✅ .specify/templates/spec-template.md (already aligned with SpecKit workflow)
+	- ✅ .specify/templates/tasks-template.md (already aligned with SpecKit workflow)
 	- ✅ .specify/templates/checklist-template.md (no change needed)
-- Follow-up TODOs:
-	- TODO(RATIFICATION_DATE): original adoption date not provided
+- Follow-up TODOs: None
 -->
 # InnovatEPAM Portal MVP Constitution
 
@@ -50,6 +50,15 @@ added using Playwright (Python) for 1-2 critical journeys only. Mutation testing
 target is 75% using mutmut when time permits.
 Rationale: strict tests protect behavior and reduce regressions.
 
+### VI. SpecKit Workflow Discipline (NON-NEGOTIABLE)
+All feature development MUST follow the SpecKit workflow sequence: specify → clarify
+→ checklist → plan → tasks → implement. Implementation MUST NOT begin before the
+plan and tasks artifacts exist. When information is missing or unclear, developers
+MUST ask clarifying questions or use MCP tools to measure/inspect the system rather
+than guessing or making assumptions. All decisions MUST be evidence-based.
+Rationale: structured workflow prevents premature implementation, reduces rework,
+and ensures shared understanding before code is written.
+
 ## Technology and Architecture Standards
 
 - Python 3.11+ with FastAPI is the only approved web stack for the MVP.
@@ -60,11 +69,32 @@ Rationale: strict tests protect behavior and reduce regressions.
 
 ## Development Workflow and Quality Gates
 
+**SpecKit Workflow (MANDATORY)**:
+- Every feature MUST follow: specify → clarify → checklist → plan → tasks → implement.
+- Each feature MUST have its own spec folder under `specs/###-feature-name/`.
+- Each feature MUST use its own Git branch named `###-feature-name`.
+- Implementation MUST NOT start until `plan.md` and `tasks.md` are completed.
+
+**Evidence-Based Development**:
+- Never guess or assume. If information is missing, MUST ask clarifying questions.
+- Use MCP tools (e.g., Playwright browser automation) to measure, inspect, or extract
+	real data from live systems when needed.
+- For UI theming: design tokens MUST be extracted from the EPAM corporate site
+	(https://www.epam.com/) using MCP browser tools and stored as versioned artifacts
+	in the repository (e.g., under `specs/###-feature-name/design-tokens.json`).
+
+**Architecture and Testing**:
 - All features must comply with the layered architecture and validation rules.
 - TDD applies to core business logic in app/services.
 - Integration tests using FastAPI TestClient are required for new endpoints.
 - Boundary validations must be tested explicitly.
 - When time permits, run mutation tests and aim for 75% mutmut score.
+
+**Pull Request Requirements**:
+- After implementation, tests MUST be run locally.
+- PR description MUST include a short test report with test results (pass/fail counts,
+	coverage percentages if relevant).
+- PRs cannot be merged without evidence that tests pass.
 
 **Required Commands**:
 
@@ -84,4 +114,4 @@ Rationale: strict tests protect behavior and reduce regressions.
 - All PRs MUST include a constitution compliance check when touching architecture,
 	testing discipline, or stack decisions.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): original adoption date not provided | **Last Amended**: 2026-02-27
+**Version**: 1.1.0 | **Ratified**: 2026-02-27 | **Last Amended**: 2026-03-02

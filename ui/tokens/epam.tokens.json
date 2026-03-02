@@ -1,129 +1,355 @@
 {
   "metadata": {
     "source_url": "https://www.epam.com/",
-    "extracted_at": "2026-03-02T14:30:00Z",
+    "extracted_at": "2026-03-02 03:51:20.829614+00:00",
     "extraction_method": "playwright-mcp",
-    "browser_version": "Chromium 121.0",
+    "browser_version": "Chromium",
     "success": true,
-    "tokens_extracted": 13,
-    "tokens_unknown": 1,
-    "extraction_duration_seconds": 25.3,
+    "tokens_extracted": 32,
+    "tokens_unknown": 2,
+    "extraction_duration_seconds": 3.848237,
     "retry_count": 0
   },
   "tokens": [
     {
       "name": "body-fontfamily",
-      "value": "Open Sans, sans-serif",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
       "type": "typography",
       "source_selector": "body",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.798130+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "body-fontsize",
       "value": "16px",
       "type": "typography",
       "source_selector": "body",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.798228+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "body-fontweight",
+      "value": "400",
+      "type": "typography",
+      "source_selector": "body",
+      "extracted_at": "2026-03-02 03:51:20.798269+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "body-lineheight",
-      "value": "1.5",
+      "value": "18.4px",
       "type": "typography",
       "source_selector": "body",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.798304+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "body-color",
+      "value": "rgb(49, 49, 49)",
+      "type": "color",
+      "source_selector": "body",
+      "extracted_at": "2026-03-02 03:51:20.798335+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "body-backgroundcolor",
+      "value": "rgba(0, 0, 0, 0)",
+      "type": "color",
+      "source_selector": "body",
+      "extracted_at": "2026-03-02 03:51:20.798364+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "body-borderradius",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "body",
+      "extracted_at": "2026-03-02 03:51:20.798403+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "body-padding",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "body",
+      "extracted_at": "2026-03-02 03:51:20.798431+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "h1-fontfamily",
-      "value": "Roboto, sans-serif",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
       "type": "typography",
       "source_selector": "h1",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.801984+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "h1-fontsize",
-      "value": "48px",
+      "value": "40px",
       "type": "typography",
       "source_selector": "h1",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.802056+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "h1-fontweight",
-      "value": "700",
+      "value": "600",
       "type": "typography",
       "source_selector": "h1",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.802099+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h1-lineheight",
+      "value": "50px",
+      "type": "typography",
+      "source_selector": "h1",
+      "extracted_at": "2026-03-02 03:51:20.802143+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h1-color",
+      "value": "rgb(49, 49, 49)",
+      "type": "color",
+      "source_selector": "h1",
+      "extracted_at": "2026-03-02 03:51:20.802260+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h1-backgroundcolor",
+      "value": "rgba(0, 0, 0, 0)",
+      "type": "color",
+      "source_selector": "h1",
+      "extracted_at": "2026-03-02 03:51:20.802342+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h1-borderradius",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "h1",
+      "extracted_at": "2026-03-02 03:51:20.802385+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h1-padding",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "h1",
+      "extracted_at": "2026-03-02 03:51:20.802418+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "h2-fontfamily",
-      "value": "Roboto, sans-serif",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
       "type": "typography",
       "source_selector": "h2",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.806066+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "h2-fontsize",
-      "value": "32px",
-      "type": "typography",
-      "source_selector": "h2",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
-    },
-    {
-      "name": "h3-fontfamily",
-      "value": "Roboto, sans-serif",
-      "type": "typography",
-      "source_selector": "h3",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
-    },
-    {
-      "name": "h3-fontsize",
       "value": "24px",
       "type": "typography",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806140+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-fontweight",
+      "value": "600",
+      "type": "typography",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806186+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-lineheight",
+      "value": "30px",
+      "type": "typography",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806218+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-color",
+      "value": "rgb(49, 49, 49)",
+      "type": "color",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806248+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-backgroundcolor",
+      "value": "rgba(0, 0, 0, 0)",
+      "type": "color",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806273+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-borderradius",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806296+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h2-padding",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "h2",
+      "extracted_at": "2026-03-02 03:51:20.806317+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "h3-unknown",
+      "value": null,
+      "type": "color",
       "source_selector": "h3",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "extracted_at": "2026-03-02 03:51:20.816422+00:00",
+      "status": "unknown",
+      "evidence": "Could not extract computed styles from selector: h3",
+      "fallback": null
     },
     {
-      "name": "primary-color",
-      "value": "#00C1DE",
+      "name": "button-unknown",
+      "value": null,
       "type": "color",
-      "source_selector": ":root --brand-primary",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "source_selector": "button[type=\"submit\"], .btn-primary, button:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.822301+00:00",
+      "status": "unknown",
+      "evidence": "Could not extract computed styles from selector: button[type=\"submit\"], .btn-primary, button:first-of-type",
+      "fallback": null
     },
     {
-      "name": "text-color",
-      "value": "#333333",
-      "type": "color",
-      "source_selector": "body",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "name": "link-fontfamily",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+      "type": "typography",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829281+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "link-fontsize",
+      "value": "12px",
+      "type": "typography",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829373+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "link-fontweight",
+      "value": "400",
+      "type": "typography",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829411+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "link-lineheight",
+      "value": "18px",
+      "type": "typography",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829444+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
       "name": "link-color",
-      "value": "#0071C5",
+      "value": "rgb(0, 0, 238)",
       "type": "color",
-      "source_selector": "a",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "extracted"
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829475+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     },
     {
-      "name": "button-hover-color",
-      "value": null,
+      "name": "link-backgroundcolor",
+      "value": "rgba(0, 0, 0, 0)",
       "type": "color",
-      "source_selector": "button:hover",
-      "extracted_at": "2026-03-02T14:30:00Z",
-      "status": "unknown",
-      "evidence": "Hover states not extractable via computed styles",
-      "fallback": "Darken primary by 10%"
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829507+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "link-borderradius",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829536+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
+    },
+    {
+      "name": "link-padding",
+      "value": "0px",
+      "type": "spacing",
+      "source_selector": "a:first-of-type",
+      "extracted_at": "2026-03-02 03:51:20.829567+00:00",
+      "status": "extracted",
+      "evidence": null,
+      "fallback": null
     }
   ]
 }

@@ -1,6 +1,6 @@
 # EPAM Typography Tokens
 
-Extracted: 2026-03-02T03:02:28.524908+00:00
+Extracted: 2026-03-02T03:51:20.924433+00:00
 
 - **body-fontfamily**: `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"` (from `body`)
 - **body-fontsize**: `16px` (from `body`)

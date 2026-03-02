@@ -3,6 +3,8 @@
 Auto-generated from all feature plans. Last updated: 2026-02-27
 
 ## Active Technologies
+- Python 3.11+ + FastAPI (existing), Playwright (MCP for browser automation), Pydantic (validation) (002-epam-ui-theme)
+- File system - ui/tokens/ directory for JSON and Markdown token artifacts (002-epam-ui-theme)
 
 - Python 3.11+ + FastAPI, SQLAlchemy 2.0, Pydantic, PyJWT, passlib[bcrypt] (001-idea-management-mvp)
 
@@ -23,6 +25,7 @@ cd src [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLO
 Python 3.11+: Follow standard conventions
 
 ## Recent Changes
+- 002-epam-ui-theme: Added Python 3.11+ + FastAPI (existing), Playwright (MCP for browser automation), Pydantic (validation)
 
 - 001-idea-management-mvp: Added Python 3.11+ + FastAPI, SQLAlchemy 2.0, Pydantic, PyJWT, passlib[bcrypt]
 

@@ -31,7 +31,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def main():
+async def main():
     """Main entry point for CLI script."""
     parser = argparse.ArgumentParser(
         description='Extract EPAM design tokens using Playwright automation',
@@ -94,10 +94,10 @@ Examples:
         service = ThemeExtractionService(url=args.url)
         
         # Run async extraction
-        token_file = asyncio.run(service.extract_tokens())
+        token_file = await service.extract_tokens()
         
         # Write to files
-        service.write_tokens_to_file(token_file, args.output_dir)
+        await service.write_tokens_to_file(token_file, args.output_dir)
         service.generate_colors_markdown(token_file.tokens, args.output_dir)
         service.generate_typography_markdown(token_file.tokens, args.output_dir)
         
@@ -132,4 +132,6 @@ Examples:
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    exit_code = asyncio.run(main())
+    sys.exit(exit_code)
+

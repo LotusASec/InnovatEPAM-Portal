@@ -4,13 +4,13 @@
 
 **Commit**: `b53fc30` on branch `002-epam-ui-theme`
 
-**Date**: 2024-12-19
+**Date**: March 2, 2026
 
 ---
 
 ## 🎯 Implementation Summary
 
-Successfully implemented complete EPAM UI Theme extraction and visualization system with 64 passing tests (73% coverage).
+Successfully implemented complete EPAM UI Theme extraction and visualization system with 64 passing tests (74% coverage).
 
 ## ✅ Validation Results
 
@@ -18,7 +18,7 @@ Successfully implemented complete EPAM UI Theme extraction and visualization sys
 ```
 64 PASSED (43 unit + 21 integration)
 0 FAILED
-73% code coverage
+74% code coverage
 Exit code: 0 (success)
 ```
 
@@ -105,13 +105,14 @@ Files committed: 26 files (4189+ lines)
 
 ## 🧪 Test Coverage Breakdown
 
-| Component | Lines | Coverage | Tests |
-|-----------|-------|----------|-------|
-| app/schemas/theme.py | 62 | 100% | 17 ✅ |
-| app/api/routes/theme.py | 65 | 83% | 10 ✅ |
-| app/core/theme_config.py | 56 | 62% | 5 ✅ |
-| app/services/theme_extraction_service.py | 138 | 45% | 11 ✅ |
-| app/services/theme_service.py | 72 | 0%* | 0 (file ops) |
+| Component | Stmts | Miss | Coverage | Tests |
+|-----------|-------|------|----------|-------|
+| app/schemas/theme.py | 62 | 0 | 100% | 17 ✅ |
+| app/api/routes/theme.py | 65 | 8 | 88% | 10 ✅ |
+| app/core/theme_config.py | 56 | 21 | 62% | 5 ✅ |
+| app/services/theme_extraction_service.py | 138 | 76 | 45% | 11 ✅ |
+| app/services/theme_service.py | 72 | 72 | 0%* | 0 (file ops) |
+| **TOTAL (all app/)** | **768** | **203** | **74%** | **64** |
 
 *Note: theme_service.py has 0% coverage because file I/O operations are integration-tested through extraction service and CLI tool.
 
@@ -165,32 +166,38 @@ Python 3.12.3
 
 ### Quality Metrics
 - **Test pass rate**: 100% (64/64)
-- **Code coverage**: 73%
+- **Code coverage**: 74% (768 statements, 203 missing)
 - **Linting**: Clean (no blocking errors)
 - **Type hints**: Complete
 - **Documentation**: Comprehensive
 
 ---
 
-## 🎓 Original Issue Resolution
+## 🎓 Issues Resolved
 
+### Issue 1: ModuleNotFoundError
 The user reported: `python scripts/extract_epam_tokens.py --verbose` 
 **Error**: `ModuleNotFoundError: No module named 'app'`
 
-### Root Cause
-CLI script didn't add project root to `sys.path` when running from scripts directory.
+**Root Cause**: CLI script didn't add project root to `sys.path` when running from scripts directory.
 
-### Solution Implemented
-Added path setup in `scripts/extract_epam_tokens.py`:
+**Solution**: Added path setup in `scripts/extract_epam_tokens.py`:
 ```python
 sys.path.insert(0, str(Path(__file__).parent.parent))
 ```
 
-### Verification
-```bash
-$ python scripts/extract_epam_tokens.py --help
-✅ Working correctly
-```
+**Verification**: ✅ Working correctly
+
+### Issue 2: RuntimeWarning - Coroutine Never Awaited
+The user reported: `RuntimeWarning: coroutine 'ThemeExtractionService.write_tokens_to_file' was never awaited`
+
+**Root Cause**: Nested `asyncio.run()` call inside async function; should use `await` instead.
+
+**Solution**: Replaced `asyncio.run(service.extract_tokens())` with `await service.extract_tokens()` on line 101.
+
+**Verification**: ✅ No warnings, all files written successfully (34 tokens extracted)
+
+See [FIX_COROUTINE_WARNING.md](FIX_COROUTINE_WARNING.md) for detailed analysis.
 
 ---
 
