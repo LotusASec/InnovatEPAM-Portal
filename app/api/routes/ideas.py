@@ -4,7 +4,8 @@ from sqlalchemy.orm import Session
 from app.api.dependencies import get_current_admin, get_current_user
 from app.core.database import get_db
 from app.schemas.ideas import IdeaDetail, IdeaSummary, StatusUpdate
-from app.services.idea_service import create_idea, get_idea_detail, list_ideas, update_idea_status
+from app.services.idea_service import create_idea, get_idea_detail, list_ideas
+from app.services.evaluation_service import update_status
 
 router = APIRouter(prefix="/ideas", tags=["ideas"])
 
@@ -44,4 +45,4 @@ def update_idea_status_endpoint(
     db: Session = Depends(get_db),
     user=Depends(get_current_admin),
 ):
-    return update_idea_status(db, user, idea_id, status_update.status)
+    return update_status(db, user, idea_id, status_update.status, status_update.comment)
